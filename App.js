@@ -37,7 +37,7 @@ const App = () => {
   };
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      {/* <TouchableOpacity
+      <TouchableOpacity
         style={{
           backgroundColor: 'yellow',
           alignItems: 'center',
@@ -49,7 +49,7 @@ const App = () => {
         }}
         onPress={checkForUpdate}>
         <Text style={{fontSize: 12, color: 'black'}}>Check for updates</Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
 
       <TouchableOpacity
         style={{
@@ -93,7 +93,7 @@ const App = () => {
 };
 
 let codePushOptions = {
-  checkFrequency: codePush.CheckFrequency.ON_APP_START,
+  checkFrequency: codePush.CheckFrequency.MANUAL,
   installMode: codePush.InstallMode.IMMEDIATE,
 };
 // App = codePush(codePushOptions)(App);
