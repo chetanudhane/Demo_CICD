@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Text, TouchableOpacity, Alert} from 'react-native';
+import {View, Text, TouchableOpacity, Alert, Image} from 'react-native';
 import codePush from 'react-native-code-push';
 
 const App = () => {
@@ -35,6 +35,7 @@ const App = () => {
       updateDialog: true,
     });
   };
+
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <TouchableOpacity
@@ -50,6 +51,12 @@ const App = () => {
         onPress={checkForUpdate}>
         <Text style={{fontSize: 12, color: 'black'}}>Check for updates</Text>
       </TouchableOpacity>
+
+      <Image
+        style={{height: 20, width: 20}}
+        resizeMode="contain"
+        source={require('./images/happy.png')}
+      />
 
       <TouchableOpacity
         style={{
@@ -71,6 +78,13 @@ const App = () => {
         }}>
         <Text style={{fontSize: 12, color: 'black'}}>Check for Update</Text>
       </TouchableOpacity>
+
+      <Image
+        style={{height: 20, width: 20}}
+        resizeMode="contain"
+        source={require('./images/sad.png')}
+      />
+
       <TouchableOpacity
         style={{
           backgroundColor: 'black',
@@ -82,12 +96,16 @@ const App = () => {
           borderWidth: 2,
         }}
         onPress={() => {}}>
-        <Text style={{fontSize: 12, color: 'white'}}>Click Here</Text>
+        <Text style={{fontSize: 12, color: 'white'}}>
+          Click Here to Check for Update
+        </Text>
       </TouchableOpacity>
-      {/* 
-      <Text style={{fontSize: 12, color: 'black'}}>code push demo app</Text>
-      <Text style={{fontSize: 12, color: 'red'}}>code push</Text> */}
-      {/* <Text style={{fontSize: 12, color: 'green'}}>code push demo app</Text> */}
+
+      <Image
+        style={{height: 20, width: 20}}
+        resizeMode="contain"
+        source={require('./images/confuse.png')}
+      />
     </View>
   );
 };
